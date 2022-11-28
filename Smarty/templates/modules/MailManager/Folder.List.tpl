@@ -15,10 +15,23 @@
     <tr>
         <td class="dvtContentSpace">
         <table cellpadding=2 cellspacing=0 border=0 class="small" width="100%">
-        {foreach item=FOLDER from=$FOLDERS}
+        {foreach item=FOLDER from=array_reverse($FOLDERS)}
         <tr>
-            <td class="cblds-p_medium">
-                <a class="mm_folder" id='_mailfolder_{$FOLDER->name()|@htmlentities}' href='#{$FOLDER->name()|@htmlentities}' onclick="MailManager.clearSearchString(); MailManager.folder_open('{$FOLDER->name()|@htmlentities}'); "
+            <td class="cblds-p_medium" >
+                <a class="mm_folder" style='display: inline-block;
+    color: #ffffff!important;
+    background-color: #3498db;
+    border: solid 1px #3498db;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+    padding: -38px 12px;
+    text-transform: capitalize;
+    border-color: #3498db;' id='_mailfolder_{$FOLDER->name()|@htmlentities}' href='#{$FOLDER->name()|@htmlentities}' onclick="MailManager.clearSearchString(); MailManager.folder_open('{$FOLDER->name()|@htmlentities}'); "
                 >{if $FOLDER->unreadCount()}<b>{$FOLDER->name()|@htmlentities} ({$FOLDER->unreadCount()})</b>{else}{$FOLDER->name()|@htmlentities}{/if}</a>
             </td>
         </tr>
