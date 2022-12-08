@@ -496,7 +496,7 @@ class cbCalendar extends CRMEntity {
 		$invites = getTranslatedString('INVITATION', 'cbCalendar');
 		$invitees_array = explode(';', $inviteesid);
 		$subject = $invites.' : '.vtlib_purify($subject);
-		$description .= "<br><br><br><a style='align:right; display: inline-block; color: #ffffff; background-color: #3498db; border: solid 1px #3498db; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize; border-color: #3498db;' target='_blank' href='https://vps41412.ovh.net/suarco/index.php?module=cbCalendar&action=DetailView&viewname=0&start=&record=";
+		$description .= "<br><br><br><a style='align:right; display: inline-block; color: #ffffff; background-color: #3498db; border: solid 1px #3498db; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize; border-color: #3498db;' target='_blank' href='$(general : (__VtigerMeta__) siteurl)/index.php?module=cbCalendar&action=DetailView&viewname=0&start=&record=";
 		$description .= $_REQUEST['return_id'];
 		foreach ($invitees_array as $inviteeid) {
 			$inviteeid = vtlib_purify($inviteeid);
