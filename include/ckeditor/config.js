@@ -22,7 +22,7 @@ CKEDITOR.editorConfig = function( config ) {
 		['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
 		['Image','Table','HorizontalRule','SpecialChar','Smiley','TextColor','BGColor'], //,'PageBreak','Smiley','UniversalKey'],
 		'/',
-		['Styles','Format','Font','FontSize']
+		['Styles','Format','Font','FontSize','Maximize']]
 	];
 	CKEDITOR.config.toolbar = 'Vtiger';
 	CKEDITOR.config.height = '320';
